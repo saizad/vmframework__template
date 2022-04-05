@@ -1,0 +1,216 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+//    id 'org.jetbrains.kotlin.android'
+}
+
+//Common
+def PACKAGE_NAME = "com.hola.perfectaluminium"
+def VERSION_CODE = 1
+
+def VERSION_NAME = "0.0.1"
+
+//local
+def DOMAIN_URL_LOCAL = "http://192.168.0.112:8000/"
+
+//Dev
+def DOMAIN_URL_DEV = "https://reqres.in/"
+
+//Stg
+def DOMAIN_URL_STG = "http://167.71.236.237:8080/"
+
+//Prod
+def DOMAIN_URL_PROD = "http://167.71.236.237:8080/"
+
+android {
+    compileSdkVersion 31
+
+    defaultConfig {
+        applicationId PACKAGE_NAME
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        testInstrumentationRunner "com.hola.perfectaluminium.CustomTestRunner"
+        multiDexEnabled true
+        archivesBaseName = "$versionName(v$versionCode)"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            renderscriptDebuggable true
+            versionNameSuffix '-debug'
+            applicationIdSuffix ".debug"
+        }
+
+        release {
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors{
+
+        local {
+            versionName VERSION_NAME + "-local"
+            buildConfigField "String", "VERSION_CODE_NAME", "\"${VERSION_NAME}\""
+            buildConfigField "String", "DOMAIN_URL", "\"${DOMAIN_URL_LOCAL}\""
+            applicationIdSuffix ".dev"
+            manifestPlaceholders = [appRoundIcon: "@mipmap/ic_local_launcher_round", appIcon: "@mipmap/ic_local_launcher", appName: "[Local]VmFrameworkExample"]
+            buildConfigField "String", "TEST_USERNAME", "\"VmFrameworkExample@VmFrameworkExample.com\""
+            buildConfigField "String", "TEST_PASSWORD", "\"testuser\""
+        }
+
+        dev {
+            versionName VERSION_NAME + "-dev"
+            buildConfigField "String", "VERSION_CODE_NAME", "\"${VERSION_NAME}\""
+            buildConfigField "String", "DOMAIN_URL", "\"${DOMAIN_URL_DEV}\""
+            applicationIdSuffix ".dev"
+            manifestPlaceholders = [appRoundIcon: "@mipmap/ic_dev_launcher_round", appIcon: "@mipmap/ic_dev_launcher", appName: "[Dev]VmFrameworkExample"]
+            buildConfigField "String", "TEST_USERNAME", "\"VmFrameworkExample@VmFrameworkExample.com\""
+            buildConfigField "String", "TEST_PASSWORD", "\"testuser\""
+        }
+
+        stg{
+            versionName VERSION_NAME + "-stg"
+            buildConfigField "String", "VERSION_CODE_NAME", "\"${VERSION_NAME}\""
+            buildConfigField "String", "DOMAIN_URL", "\"${DOMAIN_URL_STG}\""
+            applicationIdSuffix ".stg"
+            manifestPlaceholders = [appRoundIcon: "@mipmap/ic_stg_launcher_round", appIcon: "@mipmap/ic_stg_launcher", appName: "[Stg]VmFrameworkExample"]
+            buildConfigField "String", "TEST_USERNAME", "\"VmFrameworkExample@VmFrameworkExample.com\""
+            buildConfigField "String", "TEST_PASSWORD", "\"testuser\""
+        }
+
+        prod {
+            versionName VERSION_NAME + "-prod"
+            buildConfigField "String", "VERSION_CODE_NAME", "\"${VERSION_NAME}\""
+            buildConfigField "String", "DOMAIN_URL", "\"${DOMAIN_URL_PROD}\""
+            manifestPlaceholders = [appRoundIcon: "@mipmap/ic_launcher_round", appIcon: "@mipmap/ic_launcher", appName: "VmFrameworkExample"]
+            buildConfigField "String", "TEST_USERNAME", "\"\""
+            buildConfigField "String", "TEST_PASSWORD", "\"\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    sourceSets {
+        androidTest {
+            java.srcDirs += "src/sharedTest/java"
+        }
+        test {
+            java.srcDirs += "src/sharedTest/java"
+        }
+    }
+
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+
+}
+
+kapt {
+    javacOptions {
+        option("-Adagger.hilt.android.internal.disableAndroidSuperclassValidation=true")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+//    testImplementation project(":form-test")
+    testImplementation 'com.github.saizad:EasyAndroidFormTest:eb350eb37fd65975ada478b5e84da53b77c167be'
+
+//    implementation 'com.github.saizad:vm-framework:0ca1a2236b21fab86bc9f13fe0c116481023df10'
+    implementation project(":vm-framework")
+    
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    def room_version = "2.4.1"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+
+
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    // For Kotlin use kapt instead of annotationProcessor
+    kapt "androidx.room:room-compiler:$room_version"
+
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    testImplementation 'joda-time:joda-time:2.9.3'
+
+
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+
+    // Dependencies for local unit tests
+    testImplementation "androidx.room:room-testing:$room_version"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
+    testImplementation "androidx.arch.core:core-testing:$archTestingVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    // Dependencies for Android instrumented unit tests
+    androidTestImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "org.mockito:mockito-core:$mockitoVersion"
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$dexMakerVersion"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+    // Testing code should not be included in the main code.
+    // Once https://issuetracker.google.com/128612536 is fixed this can be fixed.
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentVersion"
+    implementation "androidx.test:core:$androidXTestCoreVersion"
+
+    // AndroidX Test - JVM testing
+    testImplementation "androidx.test:core-ktx:$androidXTestCoreVersion"
+    testImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
+
+    // AndroidX Test - Instrumented testing
+    androidTestImplementation "androidx.test.ext:junit:$androidXTestExtKotlinRunnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$archTestingVersion"
+}
