@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.hola.perfectaluminium.components.main.home.HomeFragment"
+        android:name="com.agrimguru.ed.components.main.home.HomeFragment"
         android:label="HomeFragment" />
 </navigation>

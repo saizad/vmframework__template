@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.hola.perfectaluminium.components.auth.splash.SplashFragment"
+        android:name="com.agrimguru.ed.components.auth.splash.SplashFragment"
         android:label="SplashFragment" />
 </navigation>
