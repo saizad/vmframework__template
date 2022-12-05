@@ -2,8 +2,8 @@
 include ':app'
 
 
-include ':vm-framework'
-project(':vm-framework').projectDir = new File('../vm-framework/vm-framework')
+//include ':vm-framework'
+//project(':vm-framework').projectDir = new File('../vm-framework/vm-framework')
 
 //include ':paged-list'
 //project(':paged-list').projectDir = new File('../PagedRecyclerList/pagedrecyclerlist')

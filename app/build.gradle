@@ -26,12 +26,12 @@ def DOMAIN_URL_STG = "http://167.71.236.237:8080/"
 def DOMAIN_URL_PROD = "http://167.71.236.237:8080/"
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId PACKAGE_NAME
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode VERSION_CODE
         versionName VERSION_NAME
         testInstrumentationRunner "com.agrimguru.ed.CustomTestRunner"
@@ -44,12 +44,6 @@ android {
         }
     }
 
-    lintOptions {
-        checkReleaseBuilds false
-        // Or, if you prefer, you can continue to check for errors in release builds,
-        // but continue the build even when errors are found:
-        abortOnError false
-    }
 
     buildTypes {
         debug {
@@ -134,6 +128,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.agrimguru.ed'
 
     android.defaultConfig.vectorDrawables.useSupportLibrary = true
 
@@ -154,12 +153,12 @@ dependencies {
 //    testImplementation project(":form-test")
     testImplementation 'com.github.saizad:EasyAndroidFormTest:eb350eb37fd65975ada478b5e84da53b77c167be'
 
-//    implementation ('com.github.saizad:vm-framework:60c90685b1') {
-//        exclude module: "play-services-ads-identifier"
-//        exclude module: "play-services-measurement"
-//        exclude module: "play-services-measurement-sdk"
-//    }
-    implementation project(":vm-framework")
+    implementation ('com.github.saizad:vm-framework:e542edd17d0d30da2220adcfe11bf020853d62df') {
+        exclude module: "play-services-ads-identifier"
+        exclude module: "play-services-measurement"
+        exclude module: "play-services-measurement-sdk"
+    }
+//    implementation project(":vm-framework")
 
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
