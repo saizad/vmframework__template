@@ -3,14 +3,14 @@
 
     <application
         android:allowBackup="true"
-        android:name="com.agrimguru.ed.AgrimGuruApplication"
+        android:name="com.eduauraa.teacher.EduauraaTeacherApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.agrimguru.ed.components.auth.AuthActivity"
+            android:name="com.eduauraa.teacher.components.MainActivity"
             android:theme="@style/FullScreen.Launch"
             android:exported="true">
             <intent-filter>
@@ -21,8 +21,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.agrimguru.ed.components.main.MainActivity"
-            android:theme="@style/MainTheme"/>
     </application>
 
 

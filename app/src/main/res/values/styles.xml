@@ -10,12 +10,8 @@
         <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
-    <style name="AuthTheme" parent="FullScreen.AppLaunch">
-        <item name="navGraph">@navigation/auth_nav</item>
-    </style>
-
     <style name="MainTheme" parent="AppTheme.NoActionBar">
-        <item name="navGraph">@navigation/main_nav</item>
+        <item name="navGraph">@navigation/nav</item>
     </style>
 
     <style name="MaterialRoundedShape" parent="AppTheme">
@@ -89,19 +85,6 @@
         <item name="textInputEditTextStyle">@style/FullNameInputEditTextStyle</item>
     </style>
 
-    <style name="JobInputLayoutStyle" parent="TextInputLayoutStyle">
-        <item name="android:hint">Job</item>
-    </style>
-
-    <style name="JobInputEditTextStyle" parent="TextInputEditTextStyle">
-        <item name="android:inputType">textCapWords</item>
-    </style>
-
-    <style name="JobTheme" parent="TextInputTheme">
-        <item name="textInputLayoutStyle">@style/JobInputLayoutStyle</item>
-        <item name="textInputEditTextStyle">@style/JobInputEditTextStyle</item>
-    </style>
-
     <style name="Space0XCornerRadius" parent="MainTheme">
         <item name="cornerRadius">@null</item>
         <item name="roundedCornerStrokeWidth">0dp</item>
@@ -126,4 +109,14 @@
         <item name="cornerRadius">@dimen/space_1x</item>
     </style>
 
+
+    <style name="BottomNavigationTextAppearance">
+        <item name="android:textSize">@dimen/px10sp</item>
+    </style>
+
+    <style name="BottomNavigationTextAppearance.Inactive"></style>
+
+    <style name="BottomNavigationTextAppearance.Active"></style>
+
+    <style name="DrawerMenuItem" parent="MainTheme"></style>
 </resources>
