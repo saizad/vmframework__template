@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaadi.assignment.components.users.AssignmentUserItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:padding="@dimen/space_1x"
+    tools:margin="@dimen/space_1x">
+
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_ripple_light"
+        android:backgroundTint="@color/user_selected"
+        android:padding="@dimen/space_1x"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@sample/random.json/data/number" />
+
+</com.shaadi.assignment.components.users.AssignmentUserItem>

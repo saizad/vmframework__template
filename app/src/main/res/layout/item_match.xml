@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shaadi.assignment.components.match.MatchesItem xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:padding="@dimen/space_1x"
+    tools:margin="@dimen/space_1x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_bg"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/space_0_1x"
+        android:padding="@dimen/space_2x"
+        android:theme="@style/Space_0_1XCornerRadius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/space_15x"
+            android:layout_height="@dimen/zero"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1x"
+            android:textColor="?colorPrimary"
+            android:textSize="@dimen/px16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1x"
+            android:textAlignment="center"
+            android:textColor="@color/grey_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:maxLines="2"
+            tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+            android:id="@+id/decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:background="@drawable/circle"
+            android:padding="@dimen/space_1x"
+            android:theme="@style/DeclineBorder"
+            app:layout_constraintEnd_toStartOf="@+id/accept"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:srcCompat="@drawable/baseline_close_24" />
+
+        <TextView
+            android:id="@+id/declineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_0_1x"
+            android:text="@string/decline"
+            android:textAlignment="center"
+            android:textColor="@color/grey_500"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/decline"
+            app:layout_constraintStart_toStartOf="@id/decline"
+            app:layout_constraintTop_toBottomOf="@+id/decline" />
+
+
+        <ImageView
+            android:id="@+id/accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_4x"
+            android:background="@drawable/circle_ripple_light"
+            android:padding="@dimen/space_1x"
+            android:theme="@style/AcceptBG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/decline"
+            app:layout_constraintTop_toTopOf="@+id/decline"
+            app:srcCompat="@drawable/baseline_check_24"
+            app:tint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/acceptTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_0_1x"
+            android:text="@string/accept"
+            android:textAlignment="center"
+            android:textColor="@color/grey_500"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/accept"
+            app:layout_constraintStart_toStartOf="@id/accept"
+            app:layout_constraintTop_toBottomOf="@+id/accept" />
+
+        <TextView
+            android:id="@+id/matchAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2x"
+            android:textSize="@dimen/px20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="Declined" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/actionGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="decline,declineTitle,accept,acceptTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.shaadi.assignment.components.match.MatchesItem>

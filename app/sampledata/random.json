@@ -1,0 +1,704 @@
+{
+  "data": [
+    {
+      "number": 1,
+      "random_bool": true,
+      "radio_bool_true": true,
+      "radio_bool_false": false,
+      "random_visibility": "visible"
+    },
+    {
+      "number": 2,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 3,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "visible"
+    },
+    {
+      "number": 4,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "visible"
+    },
+    {
+      "number": 5,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 6,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 7,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 8,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 9,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "visible"
+    },
+    {
+      "number": 10,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 11,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "visible"
+    },
+    {
+      "number": 12,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 13,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 14,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 15,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 16,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 17,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 18,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 19,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 20,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 21,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 22,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 23,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 24,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 25,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 26,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 27,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 28,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 29,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 30,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 31,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 32,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 33,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 34,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 35,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 36,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 37,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 38,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 39,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 40,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 41,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 42,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 43,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 44,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 45,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 46,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 47,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 48,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 49,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 50,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 51,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 52,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 53,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 54,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 55,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 56,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 57,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 58,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 59,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 60,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 61,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 62,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 63,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 64,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 65,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 66,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 67,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 68,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 69,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 70,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 71,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 72,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 73,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 74,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 75,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 76,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 77,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 78,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 79,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 80,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 81,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 82,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 83,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 84,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 85,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 86,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 87,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 88,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 89,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 90,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 91,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 92,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 93,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 94,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 95,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 96,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 97,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 98,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 99,
+      "random_bool": false,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    },
+    {
+      "number": 100,
+      "random_bool": true,
+      "radio_bool_true": false,
+      "radio_bool_false": true,
+      "random_visibility": "gone"
+    }
+  ]
+}

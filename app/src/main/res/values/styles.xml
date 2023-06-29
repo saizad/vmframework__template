@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/px12sp</item>
+    </style>
+
+    <style name="FullScreen.Launch">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="MainTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges
+        </item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="MaterialRoundedShape" parent="AppTheme">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/space_1x</item>
+    </style>
+
+    <style name="Space0XCornerRadius" parent="MainTheme">
+        <item name="cornerRadius">@null</item>
+        <item name="roundedCornerStrokeWidth">0dp</item>
+        <item name="roundedCornerStrokeColor">@color/strokeColor</item>
+        <item name="roundedCornerColor">@color/strokeColor</item>
+        <item name="topRightCornerRadius">@null</item>
+        <item name="topLeftCornerRadius">@null</item>
+        <item name="bottomRightCornerRadius">@null</item>
+        <item name="bottomLeftCornerRadius">@null</item>
+    </style>
+
+    <style name="Space2XCornerRadius" parent="Space0XCornerRadius">
+        <item name="cornerRadius">@dimen/space_2x</item>
+    </style>
+
+    <style name="Space_0_2XCornerRadius" parent="Space0XCornerRadius">
+        <item name="cornerRadius">@dimen/space_0_2x</item>
+    </style>
+
+
+    <style name="Space1XCornerRadius" parent="Space0XCornerRadius">
+        <item name="cornerRadius">@dimen/space_1x</item>
+    </style>
+
+    <style name="Space_0_1XCornerRadius" parent="Space0XCornerRadius">
+        <item name="cornerRadius">@dimen/space_0_1x</item>
+    </style>
+
+    <style name="DeclineBorder" parent="Space0XCornerRadius">
+        <item name="DrawableCircleColor">@color/white</item>
+        <item name="DrawableCircleStrokeWidth">@dimen/_1sdp</item>
+        <item name="DrawableCircleStrokeColor">@color/strokeColor</item>
+    </style>
+
+    <style name="AcceptBG" parent="Space0XCornerRadius">
+        <item name="DrawableCircleColor">@color/colorPrimary</item>
+        <item name="DrawableCircleStrokeWidth">@dimen/_1sdp</item>
+        <item name="DrawableCircleStrokeColor">@color/strokeColor</item>
+    </style>
+
+
+</resources>
