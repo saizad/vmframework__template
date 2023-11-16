@@ -2,10 +2,75 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="startColor">@color/colorPrimary</item>
+        <item name="centerColor">@color/accent</item>
+        <item name="endColor">@color/colorPrimaryDark</item>
+        <item name="gradientAngle">0</item>
+        <item name="DrawableCircleStrokeColor">?colorPrimaryDark</item>
+        <item name="android:textColor">@color/textColor</item>
         <item name="android:textSize">@dimen/px12sp</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="DrawableCircleSize">@dimen/zero</item>
+        <item name="DrawableCircleStrokeWidth">@dimen/zero</item>
+        <item name="CircleDrawablePaddingBottom">@dimen/zero</item>
+        <item name="CircleDrawablePaddingTop">@dimen/zero</item>
+        <item name="CircleDrawablePaddingLeft">@dimen/zero</item>
+        <item name="CircleDrawablePaddingRight">@dimen/zero</item>
+        <item name="DrawableCircleColor">@color/colorPrimaryDark</item>
+        <item name="topRightCornerRadius">@dimen/zero</item>
+        <item name="topLeftCornerRadius">@dimen/zero</item>
+        <item name="bottomRightCornerRadius">@dimen/zero</item>
+        <item name="bottomLeftCornerRadius">@dimen/zero</item>
+        <item name="cornerRadius">@dimen/zero</item>
+        <item name="roundedCornerColor">@color/colorPrimary</item>
+        <item name="roundedCornerStrokeWidth">@dimen/zero</item>
+        <item name="roundedCornerStrokeColor">@color/colorPrimaryDark</item>
+        <item name="progressBackgroundHeight">@dimen/px2dp</item>
+    </style>
+
+    <style name="AppTopCornerShapeAppearance" parent="AppTheme">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/space_2x</item>
+        <item name="cornerSizeTopLeft">@dimen/space_2x</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="myDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/AppTopCornerShapeAppearance</item>
+    </style>
+
+    <style name="NoDimDialog" parent="CustomBottomSheetDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="DimBottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="AgrimguruFullScreen" parent="AppTheme.NoActionBar">
+        <!--        <item name="android:windowFullscreen">false</item>-->
+        <!--        <item name="android:statusBarColor">@color/transparent</item>-->
+    </style>
+
+    <style name="AgrimguruFullScreen.Launch">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
     <style name="FullScreen.Launch">

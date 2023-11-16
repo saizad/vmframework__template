@@ -2,26 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_nav"
-    app:startDestination="@id/usersFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/matchesFragment"
-        android:name="com.shaadi.assignment.components.match.MatchesFragment"
-        android:label="Matches" >
-        <argument
-            android:name="user"
-            app:argType="com.shaadi.assignment.models.AssignmentUser" />
-    </fragment>
-    <fragment
-        android:id="@+id/usersFragment"
-        android:name="com.shaadi.assignment.components.users.UsersFragment"
-        android:label="UsersFragment">
-        <action
-            android:id="@+id/action_usersFragment_to_matchesFragment"
-            app:destination="@id/matchesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+        android:id="@+id/splashFragment"
+        android:name="com.drone.destination.components.splash.SplashFragment"
+        android:label="" >
     </fragment>
 </navigation>

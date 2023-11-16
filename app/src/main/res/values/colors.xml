@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#00AAE2</color>
+    <color name="colorPrimaryAlpha15">#2600AAE2</color>
+    <color name="colorPrimaryAlpha50">#8000AAE2</color>
+    <color name="colorPrimaryAlpha80">#CC00AAE2</color>
+    <color name="colorPrimaryDark">#143F6B</color>
+    <color name="colorPrimaryDarkAlpha50">#80143F6B</color>
+    <color name="colorPrimaryDarkAlpha25">#40143F6B</color>
+    <color name="colorPrimaryDarkAlpha15">#26143F6B</color>
     <color name="transparent">#00000000</color>
     <color name="strokeColor">#e0e4ec</color>
+    <color name="windowBG">#f5f6fa</color>
+    <color name="windowBGAlpha95">#f2f5f6fa</color>
+    <color name="windowBGAlpha60">#99f5f6fa</color>
+    <color name="windowBGAlpha50">#80f5f6fa</color>
+    <color name="windowBGAlpha40">#66f5f6fa</color>
+    <color name="windowBGAlpha30">#4Df5f6fa</color>
+    <color name="windowBGAlpha20">#33f5f6fa</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorAlpha80">#CC000000</color>
+    <color name="textColorAlpha70">#B3000000</color>
+    <color name="textColorAlpha60">#99000000</color>
+    <color name="textColorAlpha50">#80000000</color>
+    <color name="textColorAlpha40">#66000000</color>
+    <color name="textColorAlpha20">#33000000</color>
+    <color name="textColorAlpha25">#40000000</color>
+    <color name="textColorAlpha15">#26000000</color>
+    <color name="textColorAlpha10">#1A000000</color>
+    <color name="whiteAlpha20">#33ffffff</color>
+    <color name="whiteAlpha40">#66ffffff</color>
+    <color name="whiteAlpha50">#80ffffff</color>
+    <color name="whiteAlpha60">#99ffffff</color>
+    <color name="whiteAlpha65">#A6ffffff</color>
+    <color name="whiteAlpha80">#CCffffff</color>
 </resources>

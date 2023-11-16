@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="gutter">@dimen/px15dp</dimen>
+    <dimen name="full_screen_list_padding_bottom">@dimen/_120sdp</dimen>
+    <dimen name="px24sp">@dimen/_22ssp</dimen>
+    <dimen name="px25sp">@dimen/_23ssp</dimen>
+    <dimen name="px26sp">@dimen/_24ssp</dimen>
+    <dimen name="px28sp">@dimen/_26ssp</dimen>
+    <dimen name="px30sp">@dimen/_27ssp</dimen>
+    <dimen name="px100dp">100dp</dimen>
+    <dimen name="px200dp">200dp</dimen>
+    <dimen name="px250dp">250dp</dimen>
+    <dimen name="px300dp">300dp</dimen>
+</resources>

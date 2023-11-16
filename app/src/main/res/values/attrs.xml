@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="drawerMenuItemIcon" format="reference" />
+    <attr name="drawerMenuItemTitle" format="string" />
+    <attr name="actionButtonIcon" format="reference" />
+    <attr name="actionButtonImage" format="reference" />
+    <attr name="progressColor" format="color" />
+    <attr name="secondaryProgressColor" format="color" />
+    <attr name="progressBGColor" format="color" />
+    <attr name="progressThickness" format="dimension" />
+    <attr name="secondaryProgressThickness" format="dimension" />
+    <attr name="progressBGThickness" format="dimension" />
+    <attr name="practiceLevelIcon" format="reference" />
+    <attr name="progressBackgroundHeight" format="dimension" />
+    <attr name="homeCategoryIcon" format="reference" />
+    <attr name="homeCategoryTitle" format="string" />
+    <attr name="choiceBGTint" format="color" />
+    <attr name="choiceTextColor" format="color" />
+    <attr name="choiceIndexTextColor" format="color" />
+
+    <declare-styleable name="RingProgressView">
+        <attr name="ringProgressStartColor" format="reference" />
+        <attr name="ringProgressEndColor" format="reference" />
+        <attr name="ringProgressThickness" format="dimension" />
+        <attr name="ringBGColor" format="color" />
+        <attr name="ringBGThickness" format="dimension" />
+        <attr name="ringStartAngle" format="float" />
+        <attr name="ringProgress" format="integer" />
+        <attr name="ringMaxProgress" format="integer" />
+        <attr name="ringProgressColorPositions" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ProfileUserInfo">
+        <attr name="ProfileUserInfoIcon" format="reference" />
+        <attr name="ProfileUserInfoTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TestResultAnalytics">
+        <attr name="TestResultAnalyticsIcon" format="reference" />
+        <attr name="TestResultAnalyticsTitle" format="string" />
+        <attr name="TestResultAnalyticsColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="gradientAngle" format="float" />
+        <attr name="startColor" format="color" />
+        <attr name="centerColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="colors" format="reference" />
+        <attr name="positions" format="reference" />
+        <attr name="gradientOrientation">
+            <enum name="top_bottom" value="0" />
+            <enum name="top_right_bottom_left" value="1" />
+            <enum name="right_left" value="2" />
+            <enum name="bottom_right_top_left" value="3" />
+            <enum name="bottom_top" value="4" />
+            <enum name="bottom_left_top_right" value="5" />
+            <enum name="left_right" value="6" />
+            <enum name="none" value="-1" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>
