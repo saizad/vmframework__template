@@ -1,12 +1,14 @@
 package com.drone.destination.components
 
 import com.drone.destination.DroneDestinationCurrentUser
-import com.vm.framework.Environment
+import com.drone.destination.di.MainEnvironment
 import com.vm.framework.components.VmFrameworkBaseViewModel
 
 open class BaseViewModel(
-    environment: Environment
+    environment: MainEnvironment
 ) : VmFrameworkBaseViewModel(environment){
 
     val currentUser: DroneDestinationCurrentUser get() = environment.currentUser as DroneDestinationCurrentUser
+
+    val api = environment.api
 }

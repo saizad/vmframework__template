@@ -14,10 +14,6 @@ import com.bumptech.glide.load.resource.bitmap.FitCenter
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.drone.destination.R
-import com.vm.framework.enums.DataState
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 
 fun ImageView.circle(
     src: String, scaleType: BitmapTransformation = FitCenter(),

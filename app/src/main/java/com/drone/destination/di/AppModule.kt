@@ -26,7 +26,7 @@ object AppModule {
     @Singleton
     @Provides
     fun providesRetrofit(
-        application: Application, currentUser: DroneDestinationCurrentUser, gson: Gson
+        application: Application, currentUser: DroneDestinationCurrentUser, gson: Gson, isDebug: Boolean
     ): VmFrameworkEasyRetrofit {
         return VmFrameworkEasyRetrofit(
             application,
@@ -41,6 +41,11 @@ object AppModule {
     @Provides
     fun providesPermissionManager(sharedPreferences: SharedPreferences): PermissionManager {
         return PermissionManager()
+    }
+
+    @Provides
+    fun isDebugMode(): Boolean {
+        return BuildConfig.DEBUG
     }
 
 }

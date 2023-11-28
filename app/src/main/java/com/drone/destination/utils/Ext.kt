@@ -12,6 +12,8 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.core.os.LocaleListCompat
+import androidx.datastore.preferences.core.stringPreferencesKey
+import com.drone.destination.ErrorCodes
 import com.drone.destination.ItemOptionClickFields
 import com.drone.destination.components.BaseBottomSheetDialogFragment
 import com.drone.destination.components.BaseDialogFragment
@@ -19,12 +21,20 @@ import com.drone.destination.components.BaseFragment
 import com.drone.destination.components.BasePageFragment
 import com.drone.destination.components.MainActivity
 import com.drone.destination.models.DDPageDataModel
+import com.drone.destination.models.DroneDestinationAuth
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
 import com.sa.easyandroidform.ObjectUtils
 import com.sa.easyandroidform.StringUtils
+import com.vm.framework.DataStoreWrapper
 import com.vm.framework.enums.DataState
+import com.vm.framework.error.ApiErrorException
+import com.vm.framework.model.DataModel
+import com.vm.framework.model.Error
+import com.vm.framework.model.ErrorModel
 import com.vm.framework.utils.Utils.ordinal
+import com.vm.framework.utils.alsoLog
+import com.vm.framework.utils.apiErrorException
 import com.vm.framework.utils.loadingState
 import com.vm.framework.utils.onError
 import io.reactivex.exceptions.CompositeException
@@ -34,15 +44,16 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
+import org.joda.time.DateTime
 import sa.zad.pagedrecyclerlist.ConstraintLayoutItem
 import sa.zad.pagedrecyclerlist.ConstraintLayoutList
 import java.io.File
 import java.text.NumberFormat
 import java.util.*
-import java.util.regex.Matcher
 import java.util.regex.Pattern
 
 
@@ -155,7 +166,6 @@ fun <R> Flow<DataState<DDPageDataModel<R>>>.showLo2adingDialog(fragment: BasePag
 }
 
 
-
 fun Double.toAmount(locale: Locale = Locale("hi", "IN")): String {
     val format = NumberFormat.getCurrencyInstance(locale)
     return format.format(this).replace(".00", "")
@@ -227,6 +237,18 @@ infix fun String?.emptyOrNull(value: String): String {
     return this
 }
 
+fun intervalFlow(duration: Long, interval : Long): Flow<Long> = callbackFlow{
+    val endTime = System.currentTimeMillis() + duration
+
+    while (endTime >= System.currentTimeMillis()) {
+        delay(interval)
+        val remainder = endTime - System.currentTimeMillis()
+        trySend(remainder)
+    }
+
+    awaitClose {}
+}
+
 fun intervalFlow(interval: Long): Flow<Void?> {
     return endlessFlow.onEach {
         delay(interval)
@@ -274,7 +296,6 @@ fun FirebaseMessaging.task(): Flow<Task<String>> = callbackFlow {
 }
 
 
-
 val Locale.isHindi: Boolean get() = language == "hi" || language == "hi_IN"
 
 fun Locale.setAppLocale(context: Context) {
@@ -285,4 +306,52 @@ fun Locale.setAppLocale(context: Context) {
     } else {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.create(this))
     }
+}
+
+
+inline fun <reified T> DataStoreWrapper.fetchObject(prefKey: String): Flow<T?> {
+    val key = stringPreferencesKey(prefKey)
+    return dataStore.data.map {
+        gson.fromJson(it[key], T::class.java)
+    }
+}
+
+val Error.hasTokenExpired: Boolean
+    get() {
+        return errorCode == ErrorCodes.EXPIRED_TOKEN
+    }
+
+val DataState.ApiError.appErrorModel: ErrorModel
+    get() {
+        return apiErrorException.appErrorModel
+    }
+
+
+val ApiErrorException.appErrorModel: ErrorModel
+    get() {
+        return errorModel as ErrorModel
+    }
+
+val Flow<ApiErrorException>.tokenExpired: Flow<ApiErrorException>
+    get() {
+        return filter {
+            it.appErrorModel.error.hasTokenExpired
+        }
+    }
+
+val Flow<DataState<DataModel<DroneDestinationAuth>>>.loginExpired: Flow<ApiErrorException>
+    get() {
+        return apiErrorException().tokenExpired
+    }
+
+inline fun <T> T.alsoPrint(tag: String? = null, block: (T) -> String): T {
+    println("${tag ?: "Print"} -> ${block(this)}")
+    return this
+}
+
+fun <T> T.alsoPrint(tag: String? = null): T {
+    alsoPrint(tag) {
+        it.toString()
+    }
+    return this
 }

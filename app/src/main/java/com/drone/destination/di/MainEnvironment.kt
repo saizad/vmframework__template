@@ -15,10 +15,11 @@ import javax.inject.Singleton
 @Singleton
 class MainEnvironment @Inject constructor(
     val api: Api,
+    val isDebugMode: Boolean,
     locale: MutableStateFlow<Locale>,
-    currentUser: DroneDestinationCurrentUser,
+    droneDestinationCurrentUser: DroneDestinationCurrentUser,
     permissionManager: PermissionManager,
     @Named("nav-result")
     activityResultFlow: MutableStateFlow<ActivityResult<*>>,
     networkRequest: VmFrameworkNetworkRequest
-) : Environment(locale, currentUser, networkRequest, permissionManager, activityResultFlow)
+) : Environment(locale, droneDestinationCurrentUser, networkRequest, permissionManager, activityResultFlow)
